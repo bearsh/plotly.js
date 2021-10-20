@@ -1202,6 +1202,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -1394,6 +1404,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -1508,7 +1522,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -1517,7 +1531,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -1534,8 +1547,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -1543,7 +1555,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -12098,6 +12109,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -12290,6 +12311,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -12404,7 +12429,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -12413,7 +12438,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -12430,8 +12454,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -12439,7 +12462,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -13597,6 +13619,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -13789,6 +13821,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -13903,7 +13939,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -13912,7 +13948,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -13929,8 +13964,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -13938,7 +13972,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -17712,6 +17745,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -17904,6 +17947,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -18018,7 +18065,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -18027,7 +18074,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -18044,8 +18090,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -18053,7 +18098,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -18689,6 +18733,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -18881,6 +18935,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -18995,7 +19053,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -19004,7 +19062,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -19021,8 +19078,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -19030,7 +19086,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -19695,6 +19750,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -19887,6 +19952,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -20001,7 +20070,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -20010,7 +20079,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -20027,8 +20095,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -20036,7 +20103,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -20719,6 +20785,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -20911,6 +20987,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -21025,7 +21105,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -21034,7 +21114,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -21051,8 +21130,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -21060,7 +21138,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22055,6 +22132,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -22247,6 +22334,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -22361,7 +22452,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -22370,7 +22461,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22387,8 +22477,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -22396,7 +22485,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22991,6 +23079,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -23183,6 +23281,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -23297,7 +23399,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -23306,7 +23408,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -23323,8 +23424,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -23332,7 +23432,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -24270,6 +24369,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -24462,6 +24571,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -24576,7 +24689,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -24585,7 +24698,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -24602,8 +24714,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -24611,7 +24722,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -25964,6 +26074,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -26156,6 +26276,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -26270,7 +26394,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -26279,7 +26403,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -26296,8 +26419,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -26305,7 +26427,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -27083,6 +27204,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -27275,6 +27406,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -27389,7 +27524,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -27398,7 +27533,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -27415,8 +27549,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -27424,7 +27557,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -28546,6 +28678,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -28738,6 +28880,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -28852,7 +28998,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -28861,7 +29007,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -28878,8 +29023,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -28887,7 +29031,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -29647,6 +29790,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -29839,6 +29992,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -29953,7 +30110,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -29962,7 +30119,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -29979,8 +30135,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -29988,7 +30143,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -30738,6 +30892,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -30930,6 +31094,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -31044,7 +31212,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -31053,7 +31221,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -31070,8 +31237,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -31079,7 +31245,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -32336,6 +32501,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -32528,6 +32703,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -32642,7 +32821,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -32651,7 +32830,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -32668,8 +32846,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -32677,7 +32854,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -34602,6 +34778,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -34794,6 +34980,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -34908,7 +35098,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -34917,7 +35107,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -34934,8 +35123,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -34943,7 +35131,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -35802,6 +35989,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -35994,6 +36191,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -36108,7 +36309,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -36117,7 +36318,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -36134,8 +36334,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -36143,7 +36342,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -37756,6 +37954,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -37948,6 +38156,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -38062,7 +38274,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -38071,7 +38283,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -38088,8 +38299,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -38097,7 +38307,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -38697,6 +38906,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -38889,6 +39108,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -39003,7 +39226,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -39012,7 +39235,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -39029,8 +39251,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -39038,7 +39259,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -42061,6 +42281,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -42253,6 +42483,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -42367,7 +42601,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -42376,7 +42610,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -42393,8 +42626,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -42402,7 +42634,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -44241,6 +44472,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -44433,6 +44674,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -44547,7 +44792,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -44556,7 +44801,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -44573,8 +44817,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -44582,7 +44825,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -44814,6 +45056,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -45006,6 +45258,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -45120,7 +45376,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -45129,7 +45385,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -45146,8 +45401,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -45155,7 +45409,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -46240,6 +46493,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -46432,6 +46695,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -46546,7 +46813,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -46555,7 +46822,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -46572,8 +46838,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -46581,7 +46846,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -48059,6 +48323,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -48251,6 +48525,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -48365,7 +48643,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -48374,7 +48652,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -48391,8 +48668,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -48400,7 +48676,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -50024,6 +50299,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -50216,6 +50501,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -50330,7 +50619,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -50339,7 +50628,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -50356,8 +50644,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -50365,7 +50652,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -51908,6 +52194,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -52100,6 +52396,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -52214,7 +52514,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -52223,7 +52523,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -52240,8 +52539,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -52249,7 +52547,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -53061,6 +53358,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -53253,6 +53560,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -53367,7 +53678,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -53376,7 +53687,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -53393,8 +53703,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -53402,7 +53711,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -54883,6 +55191,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -55075,6 +55393,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -55189,7 +55511,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -55198,7 +55520,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -55215,8 +55536,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -55224,7 +55544,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -56682,6 +57001,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -56874,6 +57203,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -56988,7 +57321,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -56997,7 +57330,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -57014,8 +57346,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -57023,7 +57354,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -58507,6 +58837,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -58699,6 +59039,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -58813,7 +59157,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -58822,7 +59166,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -58839,8 +59182,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -58848,7 +59190,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -60286,6 +60627,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -60478,6 +60829,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -60592,7 +60947,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -60601,7 +60956,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -60618,8 +60972,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -60627,7 +60980,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -61669,6 +62021,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -61861,6 +62223,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -61975,7 +62341,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -61984,7 +62350,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -62001,8 +62366,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -62010,7 +62374,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -63106,6 +63469,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -63298,6 +63671,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -63412,7 +63789,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -63421,7 +63798,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -63438,8 +63814,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -63447,7 +63822,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -63963,6 +64337,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -64155,6 +64539,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -64269,7 +64657,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -64278,7 +64666,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -64295,8 +64682,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -64304,7 +64690,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -66289,6 +66674,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -66481,6 +66876,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -66595,7 +66994,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -66604,7 +67003,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -66621,8 +67019,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -66630,7 +67027,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -68569,6 +68965,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -68761,6 +69167,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -68875,7 +69285,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -68884,7 +69294,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -68901,8 +69310,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -68910,7 +69318,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
