@@ -1202,6 +1202,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -1394,6 +1404,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -1517,7 +1531,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -1543,7 +1556,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -12098,6 +12110,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -12290,6 +12312,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -12413,7 +12439,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -12439,7 +12464,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -13597,6 +13621,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -13789,6 +13823,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -13912,7 +13950,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -13938,7 +13975,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -17712,6 +17748,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -17904,6 +17950,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -18027,7 +18077,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -18053,7 +18102,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -18689,6 +18737,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -18881,6 +18939,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -19004,7 +19066,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -19030,7 +19091,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -19695,6 +19755,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -19887,6 +19957,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -20010,7 +20084,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -20036,7 +20109,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -20719,6 +20791,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -20911,6 +20993,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -21034,7 +21120,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -21060,7 +21145,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22055,6 +22139,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -22247,6 +22341,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -22370,7 +22468,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22396,7 +22493,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -22991,6 +23087,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -23183,6 +23289,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -23306,7 +23416,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -23332,7 +23441,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -24270,6 +24378,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -24462,6 +24580,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -24585,7 +24707,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -24611,7 +24732,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -25964,6 +26084,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -26156,6 +26286,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -26279,7 +26413,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -26305,7 +26438,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -27083,6 +27215,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -27275,6 +27417,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -27398,7 +27544,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -27424,7 +27569,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -28546,6 +28690,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -28738,6 +28892,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -28861,7 +29019,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -28887,7 +29044,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -29647,6 +29803,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -29839,6 +30005,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -29962,7 +30132,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -29988,7 +30157,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -30738,6 +30906,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -30930,6 +31108,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -31053,7 +31235,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -31079,7 +31260,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -32336,6 +32516,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -32528,6 +32718,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -32651,7 +32845,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -32677,7 +32870,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -34602,6 +34794,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -34794,6 +34996,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -34917,7 +35123,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -34943,7 +35148,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -35802,6 +36006,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -35994,6 +36208,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -36117,7 +36335,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -36143,7 +36360,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -37756,6 +37972,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -37948,6 +38174,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -38071,7 +38301,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -38097,7 +38326,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -38697,6 +38925,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -38889,6 +39127,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -39012,7 +39254,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -39038,7 +39279,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -42061,6 +42301,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -42253,6 +42503,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -42376,7 +42630,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -42402,7 +42655,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -44241,6 +44493,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -44433,6 +44695,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -44556,7 +44822,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -44582,7 +44847,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -44814,6 +45078,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -45006,6 +45280,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -45129,7 +45407,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -45155,7 +45432,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -46240,6 +46516,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -46432,6 +46718,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -46555,7 +46845,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -46581,7 +46870,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -48059,6 +48347,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -48251,6 +48549,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -48374,7 +48676,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -48400,7 +48701,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -50024,6 +50324,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -50216,6 +50526,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -50339,7 +50653,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -50365,7 +50678,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -51908,6 +52220,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -52100,6 +52422,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -52223,7 +52549,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -52249,7 +52574,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -53061,6 +53385,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -53253,6 +53587,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -53376,7 +53714,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -53402,7 +53739,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -54883,6 +55219,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "calc",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -55075,6 +55421,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -55198,7 +55548,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -55224,7 +55573,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -56682,6 +57030,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -56874,6 +57232,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -56997,7 +57359,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -57023,7 +57384,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -58507,6 +58867,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -58699,6 +59069,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -58822,7 +59196,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -58848,7 +59221,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -60286,6 +60658,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -60478,6 +60860,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -60601,7 +60987,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -60627,7 +61012,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -61669,6 +62053,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "colorbars",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -61861,6 +62255,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -61984,7 +62382,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -62010,7 +62407,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "colorbars",
       "valType": "enumerated",
       "values": [
@@ -63106,6 +63502,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -63298,6 +63704,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -63421,7 +63831,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -63447,7 +63856,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -63963,6 +64371,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -64155,6 +64573,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -64278,7 +64700,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -64304,7 +64725,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -66289,6 +66709,16 @@
        "min": 0,
        "valType": "integer"
       },
+      "orientation": {
+       "description": "Sets the orientation of the colorbar.",
+       "dflt": "v",
+       "editType": "colorbars",
+       "valType": "enumerated",
+       "values": [
+        "h",
+        "v"
+       ]
+      },
       "outlinecolor": {
        "description": "Sets the axis line color.",
        "dflt": "#444",
@@ -66481,6 +66911,10 @@
         "inside",
         "outside top",
         "inside top",
+        "outside left",
+        "inside left",
+        "outside right",
+        "inside right",
         "outside bottom",
         "inside bottom"
        ]
@@ -66604,7 +67038,6 @@
       },
       "xanchor": {
        "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-       "dflt": "left",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -66630,7 +67063,6 @@
       },
       "yanchor": {
        "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-       "dflt": "middle",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -68569,6 +69001,16 @@
       "min": 0,
       "valType": "integer"
      },
+     "orientation": {
+      "description": "Sets the orientation of the colorbar.",
+      "dflt": "v",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "h",
+       "v"
+      ]
+     },
      "outlinecolor": {
       "description": "Sets the axis line color.",
       "dflt": "#444",
@@ -68761,6 +69203,10 @@
        "inside",
        "outside top",
        "inside top",
+       "outside left",
+       "inside left",
+       "outside right",
+       "inside right",
        "outside bottom",
        "inside bottom"
       ]
@@ -68884,7 +69330,6 @@
      },
      "xanchor": {
       "description": "Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the *left*, *center* or *right* of the color bar.",
-      "dflt": "left",
       "editType": "calc",
       "valType": "enumerated",
       "values": [
@@ -68910,7 +69355,6 @@
      },
      "yanchor": {
       "description": "Sets this color bar's vertical position anchor This anchor binds the `y` position to the *top*, *middle* or *bottom* of the color bar.",
-      "dflt": "middle",
       "editType": "calc",
       "valType": "enumerated",
       "values": [

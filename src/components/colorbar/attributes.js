@@ -7,16 +7,12 @@ var overrideAll = require('../../plot_api/edit_types').overrideAll;
 
 
 module.exports = overrideAll({
-// TODO: only right is supported currently
-//     orient: {
-//         valType: 'enumerated',
-//         values: ['left', 'right', 'top', 'bottom'],
-//         dflt: 'right',
-//         description: [
-//             'Determines which side are the labels on',
-//             '(so left and right make vertical bars, etc.)'
-//         ].join(' ')
-//     },
+    orientation: {
+        valType: 'enumerated',
+        values: ['h', 'v'],
+        dflt: 'v',
+        description: 'Sets the orientation of the colorbar.'
+    },
     thicknessmode: {
         valType: 'enumerated',
         values: ['fraction', 'pixels'],
@@ -71,7 +67,6 @@ module.exports = overrideAll({
     xanchor: {
         valType: 'enumerated',
         values: ['left', 'center', 'right'],
-        dflt: 'left',
         description: [
             'Sets this color bar\'s horizontal position anchor.',
             'This anchor binds the `x` position to the *left*, *center*',
@@ -96,7 +91,6 @@ module.exports = overrideAll({
     yanchor: {
         valType: 'enumerated',
         values: ['top', 'middle', 'bottom'],
-        dflt: 'middle',
         description: [
             'Sets this color bar\'s vertical position anchor',
             'This anchor binds the `y` position to the *top*, *middle*',
@@ -143,18 +137,22 @@ module.exports = overrideAll({
             'In other cases the default is *hide past div*.'
         ].join(' ')
     }),
+
+    // ticklabelposition: not used directly, as values depend on orientation
+    // left/right options are for x axes, and top/bottom options are for y axes
     ticklabelposition: {
         valType: 'enumerated',
         values: [
             'outside', 'inside',
             'outside top', 'inside top',
+            'outside left', 'inside left',
+            'outside right', 'inside right',
             'outside bottom', 'inside bottom'
         ],
         dflt: 'outside',
-        description: [
-            'Determines where tick labels are drawn.'
-        ].join(' ')
+        description: 'Determines where tick labels are drawn.'
     },
+
     ticklen: axesAttrs.ticklen,
     tickwidth: axesAttrs.tickwidth,
     tickcolor: axesAttrs.tickcolor,
