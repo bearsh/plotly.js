@@ -297,6 +297,8 @@ function drawColorBar(g, opts, gd) {
     }
 
     function drawDummyTitle() {
+        if(!isVertical) return; // TODO: for horizontal this should be handled for right/left sides
+
         if(['top', 'bottom'].indexOf(titleSide) !== -1) {
             // draw the title so we know how much room it needs
             // when we squish the axis. This one only applies to
