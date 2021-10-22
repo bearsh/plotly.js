@@ -297,23 +297,34 @@ function drawColorBar(g, opts, gd) {
     }
 
     function drawDummyTitle() {
-        if(!isVertical) return; // TODO: for horizontal this should be handled for right/left sides
+        // draw the title so we know how much room it needs
+        // when we squish the axis.
+        // On vertical colorbars this only applies to top or bottom titles, not right side.
+        // On horizontal colorbars this only applies to right, etc.
 
-        if(['top', 'bottom'].indexOf(titleSide) !== -1) {
-            // draw the title so we know how much room it needs
-            // when we squish the axis. This one only applies to
-            // top or bottom titles, not right side.
-            var x = gs.l + (opts.x + xpadFrac) * gs.w;
+        if(
+            (isVertical && ['top', 'bottom'].indexOf(titleSide) !== -1) ||
+            (!isVertical && ['top', 'bottom'].indexOf(titleSide) === -1)
+        ) {
             var fontSize = ax.title.font.size;
-            var y;
+            var x, y;
 
             if(titleSide === 'top') {
-                y = (1 - (yBottomFrac + lenFrac - ypadFrac)) * gs.h +
-                    gs.t + 3 + fontSize * 0.75;
-            } else {
+                x = gs.l + (opts.x + xpadFrac) * gs.w;
+                y = (1 - (yBottomFrac + lenFrac - ypadFrac)) * gs.h + gs.t + 3 + fontSize * 0.75;
+            }
+
+            if(titleSide === 'bottom') {
+                x = gs.l + (opts.x + xpadFrac) * gs.w;
                 y = (1 - (yBottomFrac + ypadFrac)) * gs.h +
                     gs.t - 3 - fontSize * 0.25;
             }
+
+            if(titleSide === 'right') {
+                y = gs.t + (opts.x + xpadFrac) * gs.h + 3 + fontSize * 0.75;
+                x = (1 - ((0.5 - xLeftFrac) + ypadFrac)) * gs.w + gs.l;
+            }
+
             drawTitle(ax._id + 'title', {
                 attributes: {x: x, y: y, 'text-anchor': 'start'}
             });
@@ -321,17 +332,22 @@ function drawColorBar(g, opts, gd) {
     }
 
     function drawCbTitle() {
-        if(['top', 'bottom'].indexOf(titleSide) === -1) {
+        if(
+            (isVertical && ['top', 'bottom'].indexOf(titleSide) === -1) ||
+            (!isVertical && ['top', 'bottom'].indexOf(titleSide) !== -1)
+        ) {
             var fontSize = ax.title.font.size;
             var y = ax._offset + ax._length / 2;
-            var x = gs.l + (ax.position || 0) * gs.w + ((ax.side === 'right') ?
-                10 + fontSize * ((ax.showticklabels ? 1 : 0.5)) :
-                -10 - fontSize * ((ax.showticklabels ? 0.5 : 0)));
+            var x = gs.l + (ax.position || 0) * gs.w + (
+                (isVertical && ax.side === 'right') ? // TODO: handle horizontal
+                    10 + fontSize * ((ax.showticklabels ? 1 : 0.5)) :
+                    -10 - fontSize * ((ax.showticklabels ? 0.5 : 0))
+                );
 
             // the 'h' + is a hack to get around the fact that
             // convertToTspans rotates any 'y...' class by 90 degrees.
             // TODO: find a better way to control this.
-            drawTitle('h' + ax._id + 'title', {
+            drawTitle((isVertical ? 'h' : 'v') + ax._id + 'title', {
                 avoid: {
                     selection: d3.select(gd).selectAll('g.' + ax._id + 'tick'),
                     side: titleSide,
@@ -340,7 +356,7 @@ function drawColorBar(g, opts, gd) {
                     maxShift: fullLayout.width
                 },
                 attributes: {x: x, y: y, 'text-anchor': 'middle'},
-                transform: {rotate: '-90', offset: 0}
+                transform: {rotate: isVertical ? -90 : 0, offset: 0}
             });
         }
     }
