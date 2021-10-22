@@ -530,7 +530,7 @@ function drawColorBar(g, opts, gd) {
 
         g.selectAll('.' + cn.cboutline)
         .attr(isVertical ? 'x' : 'y', xLeft)
-        .attr(isVertical ? 'y' : 'x', yTopPx + opts.ypad + (titleSide === 'top' ? titleHeight : 0) + (isVertical ? 0 : lenPx))
+        .attr(isVertical ? 'y' : 'x', yTopPx + opts.ypad + (isVertical ? (titleSide === 'top' ? titleHeight : 0) : lenPx))
         .attr(isVertical ? 'width' : 'height', Math.max(thickPx, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight - 2 * opts.ypad - titleHeight, 2))
         .call(Color.stroke, opts.outlinecolor)
