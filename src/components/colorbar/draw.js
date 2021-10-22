@@ -337,12 +337,22 @@ function drawColorBar(g, opts, gd) {
             (!isVertical && ['top', 'bottom'].indexOf(titleSide) !== -1)
         ) {
             var fontSize = ax.title.font.size;
-            var y = ax._offset + ax._length / 2;
-            var x = gs.l + (ax.position || 0) * gs.w + (
-                (isVertical && ax.side === 'right') ? // TODO: handle horizontal
-                    10 + fontSize * ((ax.showticklabels ? 1 : 0.5)) :
-                    -10 - fontSize * ((ax.showticklabels ? 0.5 : 0))
-                );
+            var x, y;
+
+            if(titleSide === 'top') {
+                x = ax._offset + ax._length / 2;
+                y = gs.t + (ax.position || 0) * gs.h - 30 - fontSize * ((ax.showticklabels ? 1 : 0.5));
+            }
+
+            if(titleSide === 'bottom') {
+                x = ax._offset + ax._length / 2;
+                y = gs.t + (ax.position || 0) * gs.h + 15 + fontSize * ((ax.showticklabels ? 1 : 0.5));
+            }
+
+            if(titleSide === 'right') {
+                y = ax._offset + ax._length / 2;
+                x = gs.l + (ax.position || 0) * gs.w + 10 + fontSize * ((ax.showticklabels ? 1 : 0.5));
+            }
 
             // the 'h' + is a hack to get around the fact that
             // convertToTspans rotates any 'y...' class by 90 degrees.
