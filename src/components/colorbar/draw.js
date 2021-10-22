@@ -230,10 +230,18 @@ function drawColorBar(g, opts, gd) {
     // because that restricts it to [0,1]
     ax.position = opts.x + xpadFrac + thickFrac;
 
-    if(['top', 'bottom'].indexOf(titleSide) !== -1) {
+    var topOrBottom = ['top', 'bottom'].indexOf(titleSide) !== -1;
+
+    if(isVertical && topOrBottom) {
         ax.title.side = titleSide;
         ax.titlex = opts.x + xpadFrac;
         ax.titley = yBottomFrac + (title.side === 'top' ? lenFrac - ypadFrac : ypadFrac);
+    }
+
+    if(!isVertical && !topOrBottom) {
+        ax.title.side = titleSide;
+        ax.titley = opts.y + xpadFrac;
+        ax.titlex = yBottomFrac + ypadFrac; // right side
     }
 
     if(line.color && opts.tickmode === 'auto') {
@@ -303,8 +311,8 @@ function drawColorBar(g, opts, gd) {
         // On horizontal colorbars this only applies to right, etc.
 
         if(
-            (isVertical && ['top', 'bottom'].indexOf(titleSide) !== -1) ||
-            (!isVertical && ['top', 'bottom'].indexOf(titleSide) === -1)
+            (isVertical && topOrBottom) ||
+            (!isVertical && !topOrBottom)
         ) {
             var fontSize = ax.title.font.size;
             var x, y;
@@ -333,8 +341,8 @@ function drawColorBar(g, opts, gd) {
 
     function drawCbTitle() {
         if(
-            (isVertical && ['top', 'bottom'].indexOf(titleSide) === -1) ||
-            (!isVertical && ['top', 'bottom'].indexOf(titleSide) !== -1)
+            (isVertical && !topOrBottom) ||
+            (!isVertical && topOrBottom)
         ) {
             var fontSize = ax.title.font.size;
             var x, y;
@@ -372,7 +380,10 @@ function drawColorBar(g, opts, gd) {
     }
 
     function drawAxis() {
-        if(['top', 'bottom'].indexOf(titleSide) !== -1) {
+        if(
+            // TODO: (!isVertical && !topOrBottom) ||
+            (isVertical && topOrBottom)
+        ) {
             // squish the axis top to make room for the title
             var titleGroup = g.select('.' + cn.cbtitle);
             var titleText = titleGroup.select('text');
@@ -531,7 +542,7 @@ function drawColorBar(g, opts, gd) {
         if(titleEl.node() && !titleEl.classed(cn.jsPlaceholder)) {
             var mathJaxNode = titleCont.select('.h' + ax._id + 'title-math-group').node();
             var titleWidth;
-            if(mathJaxNode && ['top', 'bottom'].indexOf(titleSide) !== -1) {
+            if(mathJaxNode && topOrBottom) {
                 titleWidth = Drawing.bBox(mathJaxNode).width;
             } else {
                 // note: the formula below works for all title sides,
@@ -579,7 +590,7 @@ function drawColorBar(g, opts, gd) {
         var tFrac = FROM_TL[opts.yanchor];
         var bFrac = FROM_BR[opts.yanchor];
 
-        var extraThickness;
+        var extraThickness = outerwidth - thickPx;
         if(isVertical) {
             if(opts.lenmode === 'pixels') {
                 marginOpts.y = opts.y;
@@ -596,7 +607,6 @@ function drawColorBar(g, opts, gd) {
                 marginOpts.l = outerwidth * lFrac;
                 marginOpts.r = outerwidth * rFrac;
             } else {
-                extraThickness = outerwidth - thickPx;
                 marginOpts.l = extraThickness * lFrac;
                 marginOpts.r = extraThickness * rFrac;
                 marginOpts.xl = opts.x - opts.thickness * lFrac;
@@ -605,8 +615,8 @@ function drawColorBar(g, opts, gd) {
         } else { // horizontal colorbars
             if(opts.lenmode === 'pixels') {
                 marginOpts.x = opts.x;
-                marginOpts.l = outerwidth * lFrac;
-                marginOpts.r = outerwidth * rFrac;
+                marginOpts.l = outerheight * lFrac;
+                marginOpts.r = outerheight * rFrac;
             } else {
                 marginOpts.l = marginOpts.r = 0;
                 marginOpts.xl = opts.x + opts.len * lFrac;
@@ -615,10 +625,9 @@ function drawColorBar(g, opts, gd) {
 
             if(opts.thicknessmode === 'pixels') {
                 marginOpts.y = opts.y;
-                marginOpts.t = outerheight * rFrac;
-                marginOpts.b = outerheight * bFrac;
+                marginOpts.t = outerwidth * rFrac;
+                marginOpts.b = outerwidth * bFrac;
             } else {
-                extraThickness = outerheight - thickPx;
                 marginOpts.t = extraThickness * tFrac;
                 marginOpts.b = extraThickness * bFrac;
                 marginOpts.yt = opts.y - opts.thickness * tFrac;
