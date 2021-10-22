@@ -518,13 +518,13 @@ function drawColorBar(g, opts, gd) {
         var outerwidth = 2 * opts.xpad + innerWidth + opts.borderwidth + opts.outlinewidth / 2;
         var outerheight = yBottomPx - yTopPx;
 
-        var extraPx = (opts.borderwidth + opts.outlinewidth) / 2;
+        var extraW = opts.borderwidth + opts.outlinewidth;
 
         g.select('.' + cn.cbbg)
         .attr(isVertical ? 'x' : 'y', xLeft - opts.xpad - (opts.borderwidth + opts.outlinewidth) / 2)
-        .attr(isVertical ? 'y' : 'x', yTopPx - extraPx)
+        .attr(isVertical ? 'y' : 'x', yTopPx - extraW / 2)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
-        .attr(isVertical ? 'height' : 'width', Math.max(outerheight + 2 * extraPx, 2))
+        .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
         .call(Color.fill, opts.bgcolor)
         .call(Color.stroke, opts.bordercolor)
         .style('stroke-width', opts.borderwidth);
