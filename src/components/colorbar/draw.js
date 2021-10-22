@@ -204,7 +204,6 @@ function drawColorBar(g, opts, gd) {
     var lenPx = Math.round(opts.len * (opts.lenmode === 'fraction' ? h : 1));
     var lenFrac = lenPx / h;
     var xpadFrac = opts.xpad / w;
-    var yExtraPx = (opts.borderwidth + opts.outlinewidth) / 2;
     var ypadFrac = opts.ypad / h;
 
     // x positioning: do it initially just for left anchor,
@@ -519,11 +518,13 @@ function drawColorBar(g, opts, gd) {
         var outerwidth = 2 * opts.xpad + innerWidth + opts.borderwidth + opts.outlinewidth / 2;
         var outerheight = yBottomPx - yTopPx;
 
+        var extraPx = (opts.borderwidth + opts.outlinewidth) / 2;
+
         g.select('.' + cn.cbbg)
         .attr(isVertical ? 'x' : 'y', xLeft - opts.xpad - (opts.borderwidth + opts.outlinewidth) / 2)
-        .attr(isVertical ? 'y' : 'x', yTopPx - yExtraPx)
+        .attr(isVertical ? 'y' : 'x', yTopPx - extraPx)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
-        .attr(isVertical ? 'height' : 'width', Math.max(outerheight + 2 * yExtraPx, 2))
+        .attr(isVertical ? 'height' : 'width', Math.max(outerheight + 2 * extraPx, 2))
         .call(Color.fill, opts.bgcolor)
         .call(Color.stroke, opts.bordercolor)
         .style('stroke-width', opts.borderwidth);
