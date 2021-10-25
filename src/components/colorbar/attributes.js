@@ -10,7 +10,7 @@ module.exports = overrideAll({
     orientation: {
         valType: 'enumerated',
         values: ['h', 'v'],
-        dflt: 'v',
+        dflt: 'h',
         description: 'Sets the orientation of the colorbar.'
     },
     thicknessmode: {
@@ -61,7 +61,9 @@ module.exports = overrideAll({
         min: -2,
         max: 3,
         description: [
-            'Sets the x position of the color bar (in plot fraction).'
+            'Sets the x position of the color bar (in plot fraction).',
+            'Defaults to 1.02 when `orientation` if *h* and ',
+            'Defaults to 0.5 when `orientation` if *v*.'
         ].join(' ')
     },
     xanchor: {
@@ -81,11 +83,12 @@ module.exports = overrideAll({
     },
     y: {
         valType: 'number',
-        dflt: 0.5,
         min: -2,
         max: 3,
         description: [
-            'Sets the y position of the color bar (in plot fraction).'
+            'Sets the y position of the color bar (in plot fraction).',
+            'Defaults to 1.02 when `orientation` if *v* and ',
+            'Defaults to 0.5 when `orientation` if *h*.'
         ].join(' ')
     },
     yanchor: {

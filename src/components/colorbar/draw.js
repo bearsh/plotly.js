@@ -625,7 +625,7 @@ function drawColorBar(g, opts, gd) {
 
             if(opts.thicknessmode === 'pixels') {
                 marginOpts.y = opts.y;
-                marginOpts.t = outerwidth * rFrac;
+                marginOpts.t = outerwidth * tFrac;
                 marginOpts.b = outerwidth * bFrac;
             } else {
                 marginOpts.t = extraThickness * tFrac;
