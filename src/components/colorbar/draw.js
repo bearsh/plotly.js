@@ -167,6 +167,16 @@ function makeColorBarData(gd) {
 }
 
 function drawColorBar(g, opts, gd) {
+    var xpad = opts.xpad;
+    var ypad = opts.ypad;
+    var xanchor = opts.xanchor;
+    var yanchor = opts.yanchor;
+    var outlinewidth = opts.outlinewidth;
+    var thickness = opts.thickness;
+    var thicknessmode = opts.thicknessmode;
+    var lenmode = opts.lenmode;
+    var len = opts.len;
+
     var fullLayout = gd._fullLayout;
     var gs = fullLayout._size;
 
@@ -199,21 +209,21 @@ function drawColorBar(g, opts, gd) {
     var isVertical = opts.orientation === 'v';
     var w = isVertical ? gs.w : gs.h;
     var h = isVertical ? gs.h : gs.w;
-    var thickPx = Math.round(opts.thickness * (opts.thicknessmode === 'fraction' ? w : 1));
+    var thickPx = Math.round(thickness * (thicknessmode === 'fraction' ? w : 1));
     var thickFrac = thickPx / w;
-    var lenPx = Math.round(opts.len * (opts.lenmode === 'fraction' ? h : 1));
+    var lenPx = Math.round(len * (lenmode === 'fraction' ? h : 1));
     var lenFrac = lenPx / h;
-    var xpadFrac = opts.xpad / w;
-    var ypadFrac = opts.ypad / h;
+    var xpadFrac = xpad / w;
+    var ypadFrac = ypad / h;
 
     // x positioning: do it initially just for left anchor,
     // then fix at the end (since we don't know the width yet)
-    var xLeft = Math.round(opts.x * w + opts.xpad);
+    var xLeft = Math.round(opts.x * w + xpad);
     // for dragging... this is getting a little muddled...
-    var xLeftFrac = opts.x - thickFrac * ({middle: 0.5, right: 1}[opts.xanchor] || 0);
+    var xLeftFrac = opts.x - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
 
     // y positioning we can do correctly from the start
-    var yBottomFrac = opts.y + lenFrac * (({top: -0.5, bottom: 0.5}[opts.yanchor] || 0) - 0.5);
+    var yBottomFrac = opts.y + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
     var yBottomPx = Math.round(h * (1 - yBottomFrac));
     var yTopPx = yBottomPx - lenPx;
 
@@ -387,7 +397,7 @@ function drawColorBar(g, opts, gd) {
             // squish the axis top to make room for the title
             var titleGroup = g.select('.' + cn.cbtitle);
             var titleText = titleGroup.select('text');
-            var titleTrans = [-opts.outlinewidth / 2, opts.outlinewidth / 2];
+            var titleTrans = [-outlinewidth / 2, outlinewidth / 2];
             var mathJaxNode = titleGroup
                 .select('.h' + ax._id + 'title-math-group')
                 .node();
@@ -507,7 +517,7 @@ function drawColorBar(g, opts, gd) {
         axLayer.selectAll('g.' + ax._id + 'tick,path').remove();
 
         var shift = xLeft + thickPx +
-            (opts.outlinewidth || 0) / 2 - (opts.ticks === 'outside' ? 1 : 0);
+            (outlinewidth || 0) / 2 - (opts.ticks === 'outside' ? 1 : 0);
 
         var vals = Axes.calcTicks(ax);
         var tickSign = Axes.getTickSigns(ax)[2];
@@ -532,7 +542,7 @@ function drawColorBar(g, opts, gd) {
     // TODO: why are we redrawing multiple times now with this?
     // I guess autoMargin doesn't like being post-promise?
     function positionCB() {
-        var innerWidth = thickPx + opts.outlinewidth / 2;
+        var innerWidth = thickPx + outlinewidth / 2;
         if(ax.ticklabelposition.indexOf('inside') === -1) {
             innerWidth += Drawing.bBox(axLayer.node()).width;
         }
@@ -554,13 +564,13 @@ function drawColorBar(g, opts, gd) {
             innerWidth = Math.max(innerWidth, titleWidth);
         }
 
-        var outerwidth = 2 * opts.xpad + innerWidth + opts.borderwidth + opts.outlinewidth / 2;
+        var outerwidth = 2 * xpad + innerWidth + opts.borderwidth + outlinewidth / 2;
         var outerheight = yBottomPx - yTopPx;
 
-        var extraW = opts.borderwidth + opts.outlinewidth;
+        var extraW = opts.borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
-        .attr(isVertical ? 'x' : 'y', xLeft - opts.xpad - (opts.borderwidth + opts.outlinewidth) / 2)
+        .attr(isVertical ? 'x' : 'y', xLeft - xpad - (opts.borderwidth + outlinewidth) / 2)
         .attr(isVertical ? 'y' : 'x', yTopPx - extraW / 2)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
@@ -570,68 +580,68 @@ function drawColorBar(g, opts, gd) {
 
         g.selectAll('.' + cn.cboutline)
         .attr(isVertical ? 'x' : 'y', xLeft)
-        .attr(isVertical ? 'y' : 'x', yTopPx + opts.ypad + (isVertical ? (titleSide === 'top' ? titleHeight : 0) : lenPx))
+        .attr(isVertical ? 'y' : 'x', yTopPx + ypad + (isVertical ? (titleSide === 'top' ? titleHeight : 0) : lenPx))
         .attr(isVertical ? 'width' : 'height', Math.max(thickPx, 2))
-        .attr(isVertical ? 'height' : 'width', Math.max(outerheight - 2 * opts.ypad - titleHeight, 2))
+        .attr(isVertical ? 'height' : 'width', Math.max(outerheight - 2 * ypad - titleHeight, 2))
         .call(Color.stroke, opts.outlinecolor)
         .style({
             fill: 'none',
-            'stroke-width': opts.outlinewidth
+            'stroke-width': outlinewidth
         });
 
         // fix positioning for xanchor!='left'
-        var xoffset = ({center: 0.5, right: 1}[opts.xanchor] || 0) * outerwidth;
+        var xoffset = ({center: 0.5, right: 1}[xanchor] || 0) * outerwidth;
         g.attr('transform', strTranslate(gs.l - xoffset, gs.t));
 
         // auto margin adjustment
         var marginOpts = {};
-        var lFrac = FROM_TL[opts.xanchor];
-        var rFrac = FROM_BR[opts.xanchor];
-        var tFrac = FROM_TL[opts.yanchor];
-        var bFrac = FROM_BR[opts.yanchor];
+        var lFrac = FROM_TL[xanchor];
+        var rFrac = FROM_BR[xanchor];
+        var tFrac = FROM_TL[yanchor];
+        var bFrac = FROM_BR[yanchor];
 
         var extraThickness = outerwidth - thickPx;
         if(isVertical) {
-            if(opts.lenmode === 'pixels') {
+            if(lenmode === 'pixels') {
                 marginOpts.y = opts.y;
                 marginOpts.t = outerheight * tFrac;
                 marginOpts.b = outerheight * bFrac;
             } else {
                 marginOpts.t = marginOpts.b = 0;
-                marginOpts.yt = opts.y + opts.len * tFrac;
-                marginOpts.yb = opts.y - opts.len * bFrac;
+                marginOpts.yt = opts.y + len * tFrac;
+                marginOpts.yb = opts.y - len * bFrac;
             }
 
-            if(opts.thicknessmode === 'pixels') {
+            if(thicknessmode === 'pixels') {
                 marginOpts.x = opts.x;
                 marginOpts.l = outerwidth * lFrac;
                 marginOpts.r = outerwidth * rFrac;
             } else {
                 marginOpts.l = extraThickness * lFrac;
                 marginOpts.r = extraThickness * rFrac;
-                marginOpts.xl = opts.x - opts.thickness * lFrac;
-                marginOpts.xr = opts.x + opts.thickness * rFrac;
+                marginOpts.xl = opts.x - thickness * lFrac;
+                marginOpts.xr = opts.x + thickness * rFrac;
             }
         } else { // horizontal colorbars
-            if(opts.lenmode === 'pixels') {
+            if(lenmode === 'pixels') {
                 marginOpts.x = opts.x;
                 marginOpts.l = outerheight * lFrac;
                 marginOpts.r = outerheight * rFrac;
             } else {
                 marginOpts.l = marginOpts.r = 0;
-                marginOpts.xl = opts.x + opts.len * lFrac;
-                marginOpts.xr = opts.x - opts.len * rFrac;
+                marginOpts.xl = opts.x + len * lFrac;
+                marginOpts.xr = opts.x - len * rFrac;
             }
 
-            if(opts.thicknessmode === 'pixels') {
+            if(thicknessmode === 'pixels') {
                 marginOpts.y = opts.y;
                 marginOpts.t = outerwidth * tFrac;
                 marginOpts.b = outerwidth * bFrac;
             } else {
                 marginOpts.t = extraThickness * tFrac;
                 marginOpts.b = extraThickness * bFrac;
-                marginOpts.yt = opts.y - opts.thickness * tFrac;
-                marginOpts.yb = opts.y + opts.thickness * bFrac;
+                marginOpts.yt = opts.y - thickness * tFrac;
+                marginOpts.yb = opts.y + thickness * bFrac;
             }
         }
 
