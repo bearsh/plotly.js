@@ -219,13 +219,26 @@ function drawColorBar(g, opts, gd) {
 
     // x positioning: do it initially just for left anchor,
     // then fix at the end (since we don't know the width yet)
-    var cLeftPx = Math.round((isVertical ? optsX : optsY) * _w + xpad);
+    var cLeftPx = Math.round(isVertical ?
+        optsX * gs.w + xpad :
+        optsY * gs.h + ypad
+    );
     // for dragging... this is getting a little muddled...
-    var cLeftFrac = (isVertical ? optsX : optsY) - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
+    var cLeftFrac = isVertical ?
+        optsX - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0) :
+        optsY - thickFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
+
+    var cTopPx = Math.round(isVertical ?
+        optsY * gs.h + ypad :
+        optsX * gs.w + xpad
+    );
+
+    var cBottomPx = _h - cTopPx;
 
     // y positioning we can do correctly from the start
-    var cBottomFrac = (isVertical ? optsY : optsX) + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
-    var cBottomPx = Math.round(_h * (1 - cBottomFrac));
+    var cBottomFrac = isVertical ?
+        optsY + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5) :
+        optsX + lenFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
 
     // stash a few things for makeEditable
     opts._lenFrac = lenFrac;
@@ -568,32 +581,44 @@ function drawColorBar(g, opts, gd) {
 
         titleEl = titleCont.select('text');
 
+        var titleWidth = 0;
+
         if(titleEl.node() && !titleEl.classed(cn.jsPlaceholder)) {
             var mathJaxNode = titleCont.select('.h' + ax._id + 'title-math-group').node();
-            var titleWidth;
-            if(mathJaxNode && topOrBottom) {
-                titleWidth = Drawing.bBox(mathJaxNode).width;
+            var bb;
+            if(mathJaxNode && (
+                (isVertical && topOrBottom) ||
+                (!isVertical && !topOrBottom)
+            )) {
+                bb = Drawing.bBox(mathJaxNode);
+                titleWidth = isVertical ? bb.width : bb.height;
             } else {
                 // note: the formula below works for all title sides,
                 // (except for top/bottom mathjax, above)
                 // but the weird gs.l is because the titleunshift
                 // transform gets removed by Drawing.bBox
-                titleWidth = Drawing.bBox(titleCont.node()).right - cLeftPx - gs.l;
+                bb = Drawing.bBox(titleCont.node());
+                titleWidth = isVertical ?
+                    bb.right - cLeftPx - gs.l :
+                    bb.top - cLeftPx - gs.b;
             }
-            innerWidth = Math.max(innerWidth, titleWidth);
+            innerWidth = Math.max(innerWidth,
+                isVertical ? titleWidth : titleHeight
+            );
         }
 
-        var outerwidth = 2 * xpad + innerWidth + borderwidth + outlinewidth / 2;
-        var outerheight = lenPx;
+        var outerwidth = isVertical ?
+            2 * xpad + innerWidth + borderwidth + outlinewidth / 2 :
+            2 * ypad + innerWidth + borderwidth + outlinewidth / 2;
 
         var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
-        .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad : ypad) - (borderwidth + outlinewidth) / 2)
-        .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : thickPx) - extraW / 2)
+        .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad - extraW / 2 : ypad))
+        .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : extraW / 2))
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
-        .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
-        .call(Color.fill, opts.bgcolor)
+        .attr(isVertical ? 'height' : 'width', Math.max(lenPx + extraW, 2))
+        .call(Color.fill, 'yellow')
         .call(Color.stroke, opts.bordercolor)
         .style('stroke-width', borderwidth);
 
@@ -601,7 +626,10 @@ function drawColorBar(g, opts, gd) {
         .attr(isVertical ? 'x' : 'y', cLeftPx)
         .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : 0) + (isVertical ? xpad : ypad) + (isVertical && titleSide === 'top' ? titleHeight : 0))
         .attr(isVertical ? 'width' : 'height', Math.max(thickPx, 2))
-        .attr(isVertical ? 'height' : 'width', Math.max(outerheight - 2 * ypad - titleHeight, 2))
+        .attr(isVertical ? 'height' : 'width', Math.max(lenPx - 2 * (isVertical ?
+            ypad + titleHeight :
+            xpad
+        ), 2))
         .call(Color.stroke, opts.outlinecolor)
         .style({
             fill: 'none',
@@ -623,8 +651,8 @@ function drawColorBar(g, opts, gd) {
         if(isVertical) {
             if(lenmode === 'pixels') {
                 marginOpts.y = optsY;
-                marginOpts.t = outerheight * tFrac;
-                marginOpts.b = outerheight * bFrac;
+                marginOpts.t = lenPx * tFrac;
+                marginOpts.b = lenPx * bFrac;
             } else {
                 marginOpts.t = marginOpts.b = 0;
                 marginOpts.yt = optsY + len * tFrac;
@@ -644,8 +672,8 @@ function drawColorBar(g, opts, gd) {
         } else { // horizontal colorbars
             if(lenmode === 'pixels') {
                 marginOpts.x = optsX;
-                marginOpts.l = outerheight * lFrac;
-                marginOpts.r = outerheight * rFrac;
+                marginOpts.l = lenPx * lFrac;
+                marginOpts.r = lenPx * rFrac;
             } else {
                 marginOpts.l = marginOpts.r = 0;
                 marginOpts.xl = optsX + len * lFrac;
