@@ -618,7 +618,7 @@ function drawColorBar(g, opts, gd) {
         .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : extraW / 2))
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(lenPx + extraW, 2))
-        .call(Color.fill, 'yellow')
+        .call(Color.fill, opts.bgcolor)
         .call(Color.stroke, opts.bordercolor)
         .style('stroke-width', borderwidth);
 
