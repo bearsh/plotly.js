@@ -226,7 +226,6 @@ function drawColorBar(g, opts, gd) {
     // y positioning we can do correctly from the start
     var cBottomFrac = (isVertical ? optsY : optsX) + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
     var cBottomPx = Math.round(_h * (1 - cBottomFrac));
-    var cTopPx = cBottomPx - lenPx;
 
     // stash a few things for makeEditable
     opts._lenFrac = lenFrac;
@@ -263,7 +262,7 @@ function drawColorBar(g, opts, gd) {
         ax.tick0 = levelsIn.start;
         var dtick = levelsIn.size;
         // expand if too many contours, so we don't get too many ticks
-        var autoNtick = Lib.constrain((cBottomPx - cTopPx) / 50, 4, 15) + 1;
+        var autoNtick = Lib.constrain(lenPx / 50, 4, 15) + 1;
         var dtFactor = (zrange[1] - zrange[0]) / ((opts.nticks || autoNtick) * dtick);
         if(dtFactor > 1) {
             var dtexp = Math.pow(10, Math.floor(Math.log(dtFactor) / Math.LN10));
@@ -585,13 +584,13 @@ function drawColorBar(g, opts, gd) {
         }
 
         var outerwidth = 2 * xpad + innerWidth + borderwidth + outlinewidth / 2;
-        var outerheight = cBottomPx - cTopPx;
+        var outerheight = lenPx;
 
         var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
         .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad : ypad) - (borderwidth + outlinewidth) / 2)
-        .attr(isVertical ? 'y' : 'x', cTopPx - extraW / 2)
+        .attr(isVertical ? 'y' : 'x', cBottomPx - lenPx - extraW / 2)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
         .call(Color.fill, opts.bgcolor)
@@ -600,7 +599,7 @@ function drawColorBar(g, opts, gd) {
 
         g.selectAll('.' + cn.cboutline)
         .attr(isVertical ? 'x' : 'y', cLeftPx)
-        .attr(isVertical ? 'y' : 'x', cTopPx + ypad + (isVertical ? (titleSide === 'top' ? titleHeight : 0) : lenPx))
+        .attr(isVertical ? 'y' : 'x', cBottomPx - lenPx + ypad + (isVertical ? (titleSide === 'top' ? titleHeight : 0) : lenPx))
         .attr(isVertical ? 'width' : 'height', Math.max(thickPx, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight - 2 * ypad - titleHeight, 2))
         .call(Color.stroke, opts.outlinecolor)
