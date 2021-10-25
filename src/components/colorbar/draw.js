@@ -217,12 +217,12 @@ function drawColorBar(g, opts, gd) {
 
     // x positioning: do it initially just for left anchor,
     // then fix at the end (since we don't know the width yet)
-    var cLeftPx = Math.round(opts.x * _w + xpad);
+    var cLeftPx = Math.round((isVertical ? opts.x : opts.y) * _w + xpad);
     // for dragging... this is getting a little muddled...
-    var cLeftFrac = opts.x - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
+    var cLeftFrac = (isVertical ? opts.x : opts.y) - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
 
     // y positioning we can do correctly from the start
-    var cBottomFrac = opts.y + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
+    var cBottomFrac = (isVertical ? opts.y : opts.x) + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
     var cBottomPx = Math.round(_h * (1 - cBottomFrac));
     var cTopPx = cBottomPx - lenPx;
 
