@@ -569,9 +569,11 @@ function drawColorBar(g, opts, gd) {
     // TODO: why are we redrawing multiple times now with this?
     // I guess autoMargin doesn't like being post-promise?
     function positionCB() {
-        var innerWidth = thickPx + outlinewidth / 2;
+        var bb;
+        var innerThickness = thickPx + outlinewidth / 2;
         if(ticklabelposition.indexOf('inside') === -1) {
-            innerWidth += Drawing.bBox(axLayer.node()).width;
+            bb = Drawing.bBox(axLayer.node());
+            innerThickness += isVertical ? bb.width : bb.height;
         }
 
         titleEl = titleCont.select('text');
@@ -580,7 +582,6 @@ function drawColorBar(g, opts, gd) {
 
         if(titleEl.node() && !titleEl.classed(cn.jsPlaceholder)) {
             var mathJaxNode = titleCont.select('.h' + ax._id + 'title-math-group').node();
-            var bb;
             if(mathJaxNode && (
                 (isVertical && topOrBottom) ||
                 (!isVertical && !topOrBottom)
@@ -597,21 +598,22 @@ function drawColorBar(g, opts, gd) {
                     bb.right - cLeftPx - gs.l :
                     bb.top - cLeftPx - gs.b;
             }
-            innerWidth = Math.max(innerWidth,
+            innerThickness = Math.max(innerThickness,
                 isVertical ? titleWidth : titleHeight
             );
         }
 
-        var outerwidth = isVertical ?
-            2 * xpad + innerWidth + borderwidth + outlinewidth / 2 :
-            2 * ypad + innerWidth + borderwidth + outlinewidth / 2;
+        var outerThickness = (isVertical ?
+            xpad :
+            ypad
+        ) * 2 + innerThickness + borderwidth + outlinewidth / 2;
 
         var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
         .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad - extraW / 2 : ypad))
         .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : extraW / 2))
-        .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
+        .attr(isVertical ? 'width' : 'height', Math.max(outerThickness, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(lenPx + extraW, 2))
         .call(Color.fill, opts.bgcolor)
         .call(Color.stroke, opts.bordercolor)
@@ -632,7 +634,7 @@ function drawColorBar(g, opts, gd) {
         });
 
         // fix positioning for xanchor!='left'
-        var xoffset = ({center: 0.5, right: 1}[xanchor] || 0) * outerwidth;
+        var xoffset = ({center: 0.5, right: 1}[xanchor] || 0) * outerThickness;
         g.attr('transform', strTranslate(gs.l - xoffset, gs.t));
 
         // auto margin adjustment
@@ -642,7 +644,7 @@ function drawColorBar(g, opts, gd) {
         var tFrac = FROM_TL[yanchor];
         var bFrac = FROM_BR[yanchor];
 
-        var extraThickness = outerwidth - thickPx;
+        var extraThickness = outerThickness - thickPx;
         if(isVertical) {
             if(lenmode === 'pixels') {
                 marginOpts.y = optsY;
@@ -656,8 +658,8 @@ function drawColorBar(g, opts, gd) {
 
             if(thicknessmode === 'pixels') {
                 marginOpts.x = optsX;
-                marginOpts.l = outerwidth * lFrac;
-                marginOpts.r = outerwidth * rFrac;
+                marginOpts.l = outerThickness * lFrac;
+                marginOpts.r = outerThickness * rFrac;
             } else {
                 marginOpts.l = extraThickness * lFrac;
                 marginOpts.r = extraThickness * rFrac;
@@ -677,8 +679,8 @@ function drawColorBar(g, opts, gd) {
 
             if(thicknessmode === 'pixels') {
                 marginOpts.y = optsY;
-                marginOpts.t = outerwidth * tFrac;
-                marginOpts.b = outerwidth * bFrac;
+                marginOpts.t = outerThickness * tFrac;
+                marginOpts.b = outerThickness * bFrac;
             } else {
                 marginOpts.t = extraThickness * tFrac;
                 marginOpts.b = extraThickness * bFrac;
