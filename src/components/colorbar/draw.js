@@ -288,6 +288,8 @@ function drawColorBar(g, opts, gd) {
 
     ax.setScale();
 
+    var ticklabelposition = ax.ticklabelposition;
+
     g.attr('transform', strTranslate(Math.round(gs.l), Math.round(gs.t)));
 
     var titleCont = g.select('.' + cn.cbtitleunshift)
@@ -334,7 +336,7 @@ function drawColorBar(g, opts, gd) {
 
             if(titleSide === 'top') {
                 x = xpad + gs.l + gs.w * opts.x;
-                y = ypad + gs.t + gs.h * (1 - (cBottomFrac + lenFrac)) + 3 + fontSize * 0.75;
+                y = ypad + gs.t + gs.h * (1 - cBottomFrac - lenFrac) + 3 + fontSize * 0.75;
             }
 
             if(titleSide === 'bottom') {
@@ -344,7 +346,7 @@ function drawColorBar(g, opts, gd) {
 
             if(titleSide === 'right') {
                 y = ypad + gs.t + gs.h * opts.y + 3 + fontSize * 0.75;
-                x = xpad + gs.l + gs.w * (1 - cLeftFrac);
+                x = xpad + gs.l + gs.w * (1 - cBottomFrac - lenFrac);
             }
 
             drawTitle(ax._id + 'title', {
@@ -358,23 +360,34 @@ function drawColorBar(g, opts, gd) {
             (isVertical && !topOrBottom) ||
             (!isVertical && topOrBottom)
         ) {
-            var showticklabels = ax.showticklabels;
-            var fontSize = ax.title.font.size;
+            var pos = ax.position || 0;
+            var mid = ax._offset + ax._length / 2;
             var x, y;
 
             if(titleSide === 'top') {
-                x = ax._offset + ax._length / 2;
-                y = gs.t + (ax.position || 0) * gs.h - 30 - fontSize * ((showticklabels ? 1 : 0.5));
+                x = mid;
+                y = pos + gs.t + gs.h - 15 - ax.title.font.size; // TODO: handle multi-line
             }
 
             if(titleSide === 'bottom') {
-                x = ax._offset + ax._length / 2;
-                y = gs.t + (ax.position || 0) * gs.h + 15 + fontSize * ((showticklabels ? 1 : 0.5));
+                x = mid;
+                y = pos + gs.t + gs.h + thickPx / 2 + 10 + (
+                    ticklabelposition.indexOf('inside') === -1 ?
+                        ax.tickfont.size :
+                        0
+                ) + (
+                    ax.ticks !== 'intside' ?
+                        opts.ticklen || 0 :
+                        0
+                );
             }
 
             if(titleSide === 'right') {
-                y = ax._offset + ax._length / 2;
-                x = gs.l + (ax.position || 0) * gs.w + 10 + fontSize * ((showticklabels ? 1 : 0.5));
+                y = mid;
+                x = pos + gs.l + gs.w + 10 + ax.title.font.size * (
+                    ticklabelposition.indexOf('inside') === -1 &&
+                    ax.showticklabels
+                ) ? 1 : 0.5;
             }
 
             // the 'h' + is a hack to get around the fact that
@@ -548,7 +561,7 @@ function drawColorBar(g, opts, gd) {
     // I guess autoMargin doesn't like being post-promise?
     function positionCB() {
         var innerWidth = thickPx + outlinewidth / 2;
-        if(ax.ticklabelposition.indexOf('inside') === -1) {
+        if(ticklabelposition.indexOf('inside') === -1) {
             innerWidth += Drawing.bBox(axLayer.node()).width;
         }
 
