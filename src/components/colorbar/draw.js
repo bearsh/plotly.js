@@ -223,15 +223,16 @@ function drawColorBar(g, opts, gd) {
         optsX * gs.w + xpad :
         optsY * gs.h + ypad
     );
+
     // for dragging... this is getting a little muddled...
     var cLeftFrac = isVertical ?
         optsX - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0) :
-        optsY - thickFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
+        optsY - thickFrac * ({top: -0.5, bottom: 0.5}[yanchor] || 0);
 
     // y positioning we can do correctly from the start
     var cBottomFrac = isVertical ?
         optsY + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5) :
-        optsX + lenFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
+        optsX + lenFrac * (({middle: 0.5, right: 1}[xanchor] || 0) - 0.5);
 
     var cBottomPx = Math.round(_h * (1 - cBottomFrac));
 
@@ -596,7 +597,7 @@ function drawColorBar(g, opts, gd) {
                 bb = Drawing.bBox(titleCont.node());
                 titleWidth = isVertical ?
                     bb.right - cLeftPx - gs.l :
-                    bb.top - cLeftPx - gs.b;
+                    bb.top - cBottomPx - gs.b;
             }
             innerThickness = Math.max(innerThickness,
                 isVertical ? titleWidth : titleHeight
@@ -611,8 +612,8 @@ function drawColorBar(g, opts, gd) {
         var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
-        .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad - extraW / 2 : ypad))
-        .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : extraW / 2))
+        .attr('x', (isVertical ? cLeftPx : cBottomPx) - extraW / 2 - (isVertical ? xpad : lenPx))
+        .attr('y', (isVertical ? cBottomPx : cLeftPx) - (isVertical ? lenPx : thickPx))
         .attr(isVertical ? 'width' : 'height', Math.max(outerThickness, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(lenPx + extraW, 2))
         .call(Color.fill, opts.bgcolor)
@@ -620,8 +621,8 @@ function drawColorBar(g, opts, gd) {
         .style('stroke-width', borderwidth);
 
         g.selectAll('.' + cn.cboutline)
-        .attr(isVertical ? 'x' : 'y', cLeftPx)
-        .attr(isVertical ? 'y' : 'x', cBottomPx - (isVertical ? lenPx : 0) + (isVertical ? ypad : xpad) + (isVertical && titleSide === 'top' ? titleHeight : 0))
+        .attr('x', (isVertical ? cLeftPx : cBottomPx) - (isVertical ? 0 : lenPx - xpad))
+        .attr('y', (isVertical ? cBottomPx : cLeftPx) - lenPx + (isVertical ? ypad : lenPx) + (titleSide === 'top' ? titleHeight : 0))
         .attr(isVertical ? 'width' : 'height', Math.max(thickPx, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(lenPx - (isVertical ?
             2 * ypad + titleHeight :
