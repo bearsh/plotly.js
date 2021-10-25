@@ -344,7 +344,7 @@ function drawColorBar(g, opts, gd) {
 
             if(titleSide === 'right') {
                 y = ypad + gs.t + gs.h * opts.y + 3 + fontSize * 0.75;
-                x = xpad + gs.l + gs.w * cLeftFrac;
+                x = xpad + gs.l + gs.w * (1 - cLeftFrac);
             }
 
             drawTitle(ax._id + 'title', {
@@ -358,22 +358,23 @@ function drawColorBar(g, opts, gd) {
             (isVertical && !topOrBottom) ||
             (!isVertical && topOrBottom)
         ) {
+            var showticklabels = ax.showticklabels;
             var fontSize = ax.title.font.size;
             var x, y;
 
             if(titleSide === 'top') {
                 x = ax._offset + ax._length / 2;
-                y = gs.t + (ax.position || 0) * gs.h - 30 - fontSize * ((ax.showticklabels ? 1 : 0.5));
+                y = gs.t + (ax.position || 0) * gs.h - 30 - fontSize * ((showticklabels ? 1 : 0.5));
             }
 
             if(titleSide === 'bottom') {
                 x = ax._offset + ax._length / 2;
-                y = gs.t + (ax.position || 0) * gs.h + 15 + fontSize * ((ax.showticklabels ? 1 : 0.5));
+                y = gs.t + (ax.position || 0) * gs.h + 15 + fontSize * ((showticklabels ? 1 : 0.5));
             }
 
             if(titleSide === 'right') {
                 y = ax._offset + ax._length / 2;
-                x = gs.l + (ax.position || 0) * gs.w + 10 + fontSize * ((ax.showticklabels ? 1 : 0.5));
+                x = gs.l + (ax.position || 0) * gs.w + 10 + fontSize * ((showticklabels ? 1 : 0.5));
             }
 
             // the 'h' + is a hack to get around the fact that
