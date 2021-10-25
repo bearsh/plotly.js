@@ -90,5 +90,5 @@ module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
         size: Lib.bigFont(tickFont.size)
     });
     Lib.coerceFont(coerce, 'title.font', dfltTitleFont);
-    coerce('title.side');
+    coerce('title.side', isVertical ? 'top' : 'bottom');
 };

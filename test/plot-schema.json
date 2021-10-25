@@ -1505,8 +1505,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -1522,7 +1521,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -1547,7 +1546,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -12412,8 +12411,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -12429,7 +12427,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -12454,7 +12452,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -13922,8 +13920,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -13939,7 +13936,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -13964,7 +13961,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -18048,8 +18045,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -18065,7 +18061,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -18090,7 +18086,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -19036,8 +19032,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -19053,7 +19048,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -19078,7 +19073,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -20053,8 +20048,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -20070,7 +20064,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -20095,7 +20089,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -21088,8 +21082,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -21105,7 +21098,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -21130,7 +21123,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -22435,8 +22428,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -22452,7 +22444,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -22477,7 +22469,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -23382,8 +23374,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -23399,7 +23390,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -23424,7 +23415,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -24672,8 +24663,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -24689,7 +24679,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -24714,7 +24704,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -26377,8 +26367,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -26394,7 +26383,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -26419,7 +26408,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -27507,8 +27496,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -27524,7 +27512,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -27549,7 +27537,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -28981,8 +28969,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -28998,7 +28985,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -29023,7 +29010,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -30093,8 +30080,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -30110,7 +30096,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -30135,7 +30121,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -31195,8 +31181,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -31212,7 +31197,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -31237,7 +31222,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -32804,8 +32789,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -32821,7 +32805,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -32846,7 +32830,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -35081,8 +35065,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -35098,7 +35081,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -35123,7 +35106,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -36292,8 +36275,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -36309,7 +36291,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -36334,7 +36316,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -38257,8 +38239,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -38274,7 +38255,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -38299,7 +38280,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -39209,8 +39190,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -39226,7 +39206,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -39251,7 +39231,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -42584,8 +42564,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -42601,7 +42580,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -42626,7 +42605,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -44775,8 +44754,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -44792,7 +44770,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -44817,7 +44795,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -45359,8 +45337,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -45376,7 +45353,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -45401,7 +45378,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -46796,8 +46773,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -46813,7 +46789,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -46838,7 +46814,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -48626,8 +48602,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -48643,7 +48618,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -48668,7 +48643,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -50602,8 +50577,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -50619,7 +50593,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -50644,7 +50618,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -52497,8 +52471,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -52514,7 +52487,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -52539,7 +52512,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -53661,8 +53634,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -53678,7 +53650,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -53703,7 +53675,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -55494,8 +55466,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "calc",
         "valType": "enumerated",
         "values": [
@@ -55511,7 +55482,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -55536,7 +55507,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -57304,8 +57275,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -57321,7 +57291,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -57346,7 +57316,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -59140,8 +59110,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -59157,7 +59126,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -59182,7 +59151,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -60930,8 +60899,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -60947,7 +60915,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -60972,7 +60940,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -62324,8 +62292,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "colorbars",
        "valType": "enumerated",
        "values": [
@@ -62341,7 +62308,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -62366,7 +62333,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -63772,8 +63739,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -63789,7 +63755,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -63814,7 +63780,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -64640,8 +64606,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -64657,7 +64622,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -64682,7 +64647,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -66977,8 +66942,7 @@
        },
        "role": "object",
        "side": {
-        "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-        "dflt": "top",
+        "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
         "editType": "colorbars",
         "valType": "enumerated",
         "values": [
@@ -66994,7 +66958,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -67019,7 +66983,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -69268,8 +69232,7 @@
       },
       "role": "object",
       "side": {
-       "description": "Determines the location of color bar's title with respect to the color bar. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
-       "dflt": "top",
+       "description": "Determines the location of color bar's title with respect to the color bar. Defaults to *top* when `orientation` if *v* and  defaults to *bottom* when `orientation` if *h*. Note that the title's location used to be set by the now deprecated `titleside` attribute.",
        "editType": "calc",
        "valType": "enumerated",
        "values": [
@@ -69285,7 +69248,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -69310,7 +69273,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,

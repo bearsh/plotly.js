@@ -63,7 +63,7 @@ module.exports = overrideAll({
         description: [
             'Sets the x position of the color bar (in plot fraction).',
             'Defaults to 1.02 when `orientation` if *h* and ',
-            'Defaults to 0.5 when `orientation` if *v*.'
+            'defaults to 0.5 when `orientation` if *v*.'
         ].join(' ')
     },
     xanchor: {
@@ -88,7 +88,7 @@ module.exports = overrideAll({
         description: [
             'Sets the y position of the color bar (in plot fraction).',
             'Defaults to 1.02 when `orientation` if *v* and ',
-            'Defaults to 0.5 when `orientation` if *h*.'
+            'defaults to 0.5 when `orientation` if *h*.'
         ].join(' ')
     },
     yanchor: {
@@ -194,10 +194,11 @@ module.exports = overrideAll({
         side: {
             valType: 'enumerated',
             values: ['right', 'top', 'bottom'],
-            dflt: 'top',
             description: [
                 'Determines the location of color bar\'s title',
                 'with respect to the color bar.',
+                'Defaults to *top* when `orientation` if *v* and ',
+                'defaults to *bottom* when `orientation` if *h*.',
                 'Note that the title\'s location used to be set',
                 'by the now deprecated `titleside` attribute.'
             ].join(' ')
