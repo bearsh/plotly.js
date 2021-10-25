@@ -167,16 +167,18 @@ function makeColorBarData(gd) {
 }
 
 function drawColorBar(g, opts, gd) {
-    var xpad = opts.xpad;
-    var ypad = opts.ypad;
-    var xanchor = opts.xanchor;
-    var yanchor = opts.yanchor;
-    var outlinewidth = opts.outlinewidth;
-    var borderwidth = opts.borderwidth;
+    var len = opts.len;
+    var lenmode = opts.lenmode;
     var thickness = opts.thickness;
     var thicknessmode = opts.thicknessmode;
-    var lenmode = opts.lenmode;
-    var len = opts.len;
+    var outlinewidth = opts.outlinewidth;
+    var borderwidth = opts.borderwidth;
+    var xanchor = opts.xanchor;
+    var yanchor = opts.yanchor;
+    var xpad = opts.xpad;
+    var ypad = opts.ypad;
+    var optsX = opts.x;
+    var optsY = opts.y;
 
     var fullLayout = gd._fullLayout;
     var gs = fullLayout._size;
@@ -217,12 +219,12 @@ function drawColorBar(g, opts, gd) {
 
     // x positioning: do it initially just for left anchor,
     // then fix at the end (since we don't know the width yet)
-    var cLeftPx = Math.round((isVertical ? opts.x : opts.y) * _w + xpad);
+    var cLeftPx = Math.round((isVertical ? optsX : optsY) * _w + xpad);
     // for dragging... this is getting a little muddled...
-    var cLeftFrac = (isVertical ? opts.x : opts.y) - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
+    var cLeftFrac = (isVertical ? optsX : optsY) - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
 
     // y positioning we can do correctly from the start
-    var cBottomFrac = (isVertical ? opts.y : opts.x) + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
+    var cBottomFrac = (isVertical ? optsY : optsX) + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
     var cBottomPx = Math.round(_h * (1 - cBottomFrac));
     var cTopPx = cBottomPx - lenPx;
 
@@ -238,21 +240,21 @@ function drawColorBar(g, opts, gd) {
     // position can't go in through supplyDefaults
     // because that restricts it to [0,1]
     ax.position = thickFrac + (isVertical ?
-        opts.x + xpad / gs.w :
-        opts.y + ypad / gs.h
+        optsX + xpad / gs.w :
+        optsY + ypad / gs.h
     );
 
     var topOrBottom = ['top', 'bottom'].indexOf(titleSide) !== -1;
 
     if(isVertical && topOrBottom) {
         ax.title.side = titleSide;
-        ax.titlex = opts.x + xpad / gs.w;
+        ax.titlex = optsX + xpad / gs.w;
         ax.titley = cBottomFrac + (title.side === 'top' ? lenFrac - ypad / gs.h : ypad / gs.h);
     }
 
     if(!isVertical && !topOrBottom) {
         ax.title.side = titleSide;
-        ax.titley = opts.y + ypad / gs.h;
+        ax.titley = optsY + ypad / gs.h;
         ax.titlex = cBottomFrac + xpad / gs.w; // right side
     }
 
@@ -335,17 +337,17 @@ function drawColorBar(g, opts, gd) {
             var x, y;
 
             if(titleSide === 'top') {
-                x = xpad + gs.l + gs.w * opts.x;
+                x = xpad + gs.l + gs.w * optsX;
                 y = ypad + gs.t + gs.h * (1 - cBottomFrac - lenFrac) + 3 + fontSize * 0.75;
             }
 
             if(titleSide === 'bottom') {
-                x = xpad + gs.l + gs.w * opts.x;
+                x = xpad + gs.l + gs.w * optsX;
                 y = ypad + gs.t + gs.h * (1 - cBottomFrac) - 3 - fontSize * 0.25;
             }
 
             if(titleSide === 'right') {
-                y = ypad + gs.t + gs.h * opts.y + 3 + fontSize * 0.75;
+                y = ypad + gs.t + gs.h * optsY + 3 + fontSize * 0.75;
                 x = xpad + gs.l + gs.w * (1 - cBottomFrac - lenFrac);
             }
 
@@ -588,7 +590,7 @@ function drawColorBar(g, opts, gd) {
         var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
-        .attr(isVertical ? 'x' : 'y', cLeftPx - xpad - (borderwidth + outlinewidth) / 2)
+        .attr(isVertical ? 'x' : 'y', cLeftPx - (isVertical ? xpad : ypad) - (borderwidth + outlinewidth) / 2)
         .attr(isVertical ? 'y' : 'x', cTopPx - extraW / 2)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
@@ -621,45 +623,45 @@ function drawColorBar(g, opts, gd) {
         var extraThickness = outerwidth - thickPx;
         if(isVertical) {
             if(lenmode === 'pixels') {
-                marginOpts.y = opts.y;
+                marginOpts.y = optsY;
                 marginOpts.t = outerheight * tFrac;
                 marginOpts.b = outerheight * bFrac;
             } else {
                 marginOpts.t = marginOpts.b = 0;
-                marginOpts.yt = opts.y + len * tFrac;
-                marginOpts.yb = opts.y - len * bFrac;
+                marginOpts.yt = optsY + len * tFrac;
+                marginOpts.yb = optsY - len * bFrac;
             }
 
             if(thicknessmode === 'pixels') {
-                marginOpts.x = opts.x;
+                marginOpts.x = optsX;
                 marginOpts.l = outerwidth * lFrac;
                 marginOpts.r = outerwidth * rFrac;
             } else {
                 marginOpts.l = extraThickness * lFrac;
                 marginOpts.r = extraThickness * rFrac;
-                marginOpts.xl = opts.x - thickness * lFrac;
-                marginOpts.xr = opts.x + thickness * rFrac;
+                marginOpts.xl = optsX - thickness * lFrac;
+                marginOpts.xr = optsX + thickness * rFrac;
             }
         } else { // horizontal colorbars
             if(lenmode === 'pixels') {
-                marginOpts.x = opts.x;
+                marginOpts.x = optsX;
                 marginOpts.l = outerheight * lFrac;
                 marginOpts.r = outerheight * rFrac;
             } else {
                 marginOpts.l = marginOpts.r = 0;
-                marginOpts.xl = opts.x + len * lFrac;
-                marginOpts.xr = opts.x - len * rFrac;
+                marginOpts.xl = optsX + len * lFrac;
+                marginOpts.xr = optsX - len * rFrac;
             }
 
             if(thicknessmode === 'pixels') {
-                marginOpts.y = opts.y;
+                marginOpts.y = optsY;
                 marginOpts.t = outerwidth * tFrac;
                 marginOpts.b = outerwidth * bFrac;
             } else {
                 marginOpts.t = extraThickness * tFrac;
                 marginOpts.b = extraThickness * bFrac;
-                marginOpts.yt = opts.y - thickness * tFrac;
-                marginOpts.yb = opts.y + thickness * bFrac;
+                marginOpts.yt = optsY - thickness * tFrac;
+                marginOpts.yb = optsY + thickness * bFrac;
             }
         }
 
