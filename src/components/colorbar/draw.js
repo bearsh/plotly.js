@@ -172,6 +172,7 @@ function drawColorBar(g, opts, gd) {
     var xanchor = opts.xanchor;
     var yanchor = opts.yanchor;
     var outlinewidth = opts.outlinewidth;
+    var borderwidth = opts.borderwidth;
     var thickness = opts.thickness;
     var thicknessmode = opts.thicknessmode;
     var lenmode = opts.lenmode;
@@ -564,19 +565,19 @@ function drawColorBar(g, opts, gd) {
             innerWidth = Math.max(innerWidth, titleWidth);
         }
 
-        var outerwidth = 2 * xpad + innerWidth + opts.borderwidth + outlinewidth / 2;
+        var outerwidth = 2 * xpad + innerWidth + borderwidth + outlinewidth / 2;
         var outerheight = yBottomPx - yTopPx;
 
-        var extraW = opts.borderwidth + outlinewidth;
+        var extraW = borderwidth + outlinewidth;
 
         g.select('.' + cn.cbbg)
-        .attr(isVertical ? 'x' : 'y', xLeft - xpad - (opts.borderwidth + outlinewidth) / 2)
+        .attr(isVertical ? 'x' : 'y', xLeft - xpad - (borderwidth + outlinewidth) / 2)
         .attr(isVertical ? 'y' : 'x', yTopPx - extraW / 2)
         .attr(isVertical ? 'width' : 'height', Math.max(outerwidth, 2))
         .attr(isVertical ? 'height' : 'width', Math.max(outerheight + extraW, 2))
         .call(Color.fill, opts.bgcolor)
         .call(Color.stroke, opts.bordercolor)
-        .style('stroke-width', opts.borderwidth);
+        .style('stroke-width', borderwidth);
 
         g.selectAll('.' + cn.cboutline)
         .attr(isVertical ? 'x' : 'y', xLeft)
