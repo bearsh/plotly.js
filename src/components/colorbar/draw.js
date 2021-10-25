@@ -208,24 +208,22 @@ function drawColorBar(g, opts, gd) {
     // but then the fractional size is calculated based on the
     // actual graph size, so that the axes will size correctly.
     var isVertical = opts.orientation === 'v';
-    var w = isVertical ? gs.w : gs.h;
-    var h = isVertical ? gs.h : gs.w;
-    var thickPx = Math.round(thickness * (thicknessmode === 'fraction' ? w : 1));
-    var thickFrac = thickPx / w;
-    var lenPx = Math.round(len * (lenmode === 'fraction' ? h : 1));
-    var lenFrac = lenPx / h;
-    var xpadFrac = xpad / w;
-    var ypadFrac = ypad / h;
+    var _w = isVertical ? gs.w : gs.h;
+    var _h = isVertical ? gs.h : gs.w;
+    var thickPx = Math.round(thickness * (thicknessmode === 'fraction' ? _w : 1));
+    var thickFrac = thickPx / _w;
+    var lenPx = Math.round(len * (lenmode === 'fraction' ? _h : 1));
+    var lenFrac = lenPx / _h;
 
     // x positioning: do it initially just for left anchor,
     // then fix at the end (since we don't know the width yet)
-    var cLeftPx = Math.round(opts.x * w + xpad);
+    var cLeftPx = Math.round(opts.x * _w + xpad);
     // for dragging... this is getting a little muddled...
     var cLeftFrac = opts.x - thickFrac * ({middle: 0.5, right: 1}[xanchor] || 0);
 
     // y positioning we can do correctly from the start
     var cBottomFrac = opts.y + lenFrac * (({top: -0.5, bottom: 0.5}[yanchor] || 0) - 0.5);
-    var cBottomPx = Math.round(h * (1 - cBottomFrac));
+    var cBottomPx = Math.round(_h * (1 - cBottomFrac));
     var cTopPx = cBottomPx - lenPx;
 
     // stash a few things for makeEditable
@@ -239,20 +237,23 @@ function drawColorBar(g, opts, gd) {
 
     // position can't go in through supplyDefaults
     // because that restricts it to [0,1]
-    ax.position = opts.x + xpadFrac + thickFrac;
+    ax.position = thickFrac + (isVertical ?
+        opts.x + xpad / gs.w :
+        opts.y + ypad / gs.h
+    );
 
     var topOrBottom = ['top', 'bottom'].indexOf(titleSide) !== -1;
 
     if(isVertical && topOrBottom) {
         ax.title.side = titleSide;
-        ax.titlex = opts.x + xpadFrac;
-        ax.titley = cBottomFrac + (title.side === 'top' ? lenFrac - ypadFrac : ypadFrac);
+        ax.titlex = opts.x + xpad / gs.w;
+        ax.titley = cBottomFrac + (title.side === 'top' ? lenFrac - ypad / gs.h : ypad / gs.h);
     }
 
     if(!isVertical && !topOrBottom) {
         ax.title.side = titleSide;
-        ax.titley = opts.y + xpadFrac;
-        ax.titlex = cBottomFrac + ypadFrac; // right side
+        ax.titley = opts.y + ypad / gs.h;
+        ax.titlex = cBottomFrac + xpad / gs.w; // right side
     }
 
     if(line.color && opts.tickmode === 'auto') {
@@ -277,9 +278,12 @@ function drawColorBar(g, opts, gd) {
 
     // set domain after init, because we may want to
     // allow it outside [0,1]
-    ax.domain = [
-        cBottomFrac + ypadFrac,
-        cBottomFrac + lenFrac - ypadFrac
+    ax.domain = isVertical ? [
+        cBottomFrac + ypad / gs.h,
+        cBottomFrac + lenFrac - ypad / gs.h
+    ] : [
+        cBottomFrac + xpad / gs.w,
+        cBottomFrac + lenFrac - xpad / gs.w
     ];
 
     ax.setScale();
@@ -329,19 +333,18 @@ function drawColorBar(g, opts, gd) {
             var x, y;
 
             if(titleSide === 'top') {
-                x = gs.l + (opts.x + xpadFrac) * gs.w;
-                y = (1 - (cBottomFrac + lenFrac - ypadFrac)) * gs.h + gs.t + 3 + fontSize * 0.75;
+                x = xpad + gs.l + gs.w * opts.x;
+                y = ypad + gs.t + gs.h * (1 - (cBottomFrac + lenFrac)) + 3 + fontSize * 0.75;
             }
 
             if(titleSide === 'bottom') {
-                x = gs.l + (opts.x + xpadFrac) * gs.w;
-                y = (1 - (cBottomFrac + ypadFrac)) * gs.h +
-                    gs.t - 3 - fontSize * 0.25;
+                x = xpad + gs.l + gs.w * opts.x;
+                y = ypad + gs.t + gs.h * (1 - cBottomFrac) - 3 - fontSize * 0.25;
             }
 
             if(titleSide === 'right') {
-                y = gs.t + (opts.x + xpadFrac) * gs.h + 3 + fontSize * 0.75;
-                x = (1 - ((0.5 - cLeftFrac) + ypadFrac)) * gs.w + gs.l;
+                y = ypad + gs.t + gs.h * opts.y + 3 + fontSize * 0.75;
+                x = xpad + gs.l + gs.w * cLeftFrac;
             }
 
             drawTitle(ax._id + 'title', {
