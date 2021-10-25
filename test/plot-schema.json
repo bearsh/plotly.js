@@ -1522,7 +1522,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -1547,8 +1547,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -12430,7 +12429,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -12455,8 +12454,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -13941,7 +13939,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -13966,8 +13964,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -18068,7 +18065,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -18093,8 +18090,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -19057,7 +19053,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -19082,8 +19078,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -20075,7 +20070,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -20100,8 +20095,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -21111,7 +21105,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -21136,8 +21130,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -22459,7 +22452,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -22484,8 +22477,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -23407,7 +23399,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -23432,8 +23424,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -24698,7 +24689,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -24723,8 +24714,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -26404,7 +26394,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -26429,8 +26419,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -27535,7 +27524,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -27560,8 +27549,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -29010,7 +28998,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -29035,8 +29023,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -30123,7 +30110,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -30148,8 +30135,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -31226,7 +31212,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -31251,8 +31237,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -32836,7 +32821,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -32861,8 +32846,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -35114,7 +35098,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -35139,8 +35123,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -36326,7 +36309,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -36351,8 +36334,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -38292,7 +38274,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -38317,8 +38299,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -39245,7 +39226,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -39270,8 +39251,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -42621,7 +42601,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -42646,8 +42626,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -44813,7 +44792,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -44838,8 +44817,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -45398,7 +45376,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -45423,8 +45401,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -46836,7 +46813,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -46861,8 +46838,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -48667,7 +48643,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -48692,8 +48668,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -50644,7 +50619,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -50669,8 +50644,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -52540,7 +52514,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -52565,8 +52539,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -53705,7 +53678,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -53730,8 +53703,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -55539,7 +55511,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "calc",
        "max": 3,
@@ -55564,8 +55536,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "calc",
        "max": 3,
        "min": -2,
@@ -57350,7 +57321,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -57375,8 +57346,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -59187,7 +59157,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -59212,8 +59182,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -60978,7 +60947,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -61003,8 +60972,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -62373,7 +62341,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "colorbars",
       "max": 3,
@@ -62398,8 +62366,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "colorbars",
       "max": 3,
       "min": -2,
@@ -63822,7 +63789,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -63847,8 +63814,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -64691,7 +64657,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -64716,8 +64682,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
@@ -67029,7 +66994,7 @@
        }
       },
       "x": {
-       "description": "Sets the x position of the color bar (in plot fraction).",
+       "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
        "dflt": 1.02,
        "editType": "colorbars",
        "max": 3,
@@ -67054,8 +67019,7 @@
        "valType": "number"
       },
       "y": {
-       "description": "Sets the y position of the color bar (in plot fraction).",
-       "dflt": 0.5,
+       "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
        "editType": "colorbars",
        "max": 3,
        "min": -2,
@@ -69321,7 +69285,7 @@
       }
      },
      "x": {
-      "description": "Sets the x position of the color bar (in plot fraction).",
+      "description": "Sets the x position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *h* and  Defaults to 0.5 when `orientation` if *v*.",
       "dflt": 1.02,
       "editType": "calc",
       "max": 3,
@@ -69346,8 +69310,7 @@
       "valType": "number"
      },
      "y": {
-      "description": "Sets the y position of the color bar (in plot fraction).",
-      "dflt": 0.5,
+      "description": "Sets the y position of the color bar (in plot fraction). Defaults to 1.02 when `orientation` if *v* and  Defaults to 0.5 when `orientation` if *h*.",
       "editType": "calc",
       "max": 3,
       "min": -2,
