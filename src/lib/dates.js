@@ -476,8 +476,27 @@ exports.formatDate = function(x, fmt, tr, formatter, calendar, extraFormat) {
         else if(tr === 'm') fmt = extraFormat.month;
         else if(tr === 'd') {
             fmt = extraFormat.dayMonth + '\n' + extraFormat.year;
-        } else {
-            return formatTime(x, tr) + '\n' + modDateFormat(extraFormat.dayMonthYear, x, formatter, calendar);
+        } else if(tr === 'M') {
+            fmt = '%H:%M\n' + extraFormat.dayMonthYear;
+        } else if(tr === 'S' || tr === 0) {
+            fmt = '%H:%M:%S\n' + extraFormat.dayMonthYear;
+        } else if(isNumeric(tr)) {
+            if(tr > 3) tr = 3;
+            var usStr = modDateFormat('0.%L', x, formatter, calendar);
+            usStr = Number(Number(usStr).toFixed(tr)).toString();
+            if(usStr.charAt(0) === '1') {
+                // incr time by one second
+                x += 1000;
+                usStr = '';
+            } else {
+                // cut off '0' from '0.x'
+                usStr = usStr.substr(1);
+            }
+
+            var time = modDateFormat('%H:%M:%S', x, formatter, calendar);
+            var date = modDateFormat(extraFormat.dayMonthYear, x, formatter, calendar);
+
+            return time + usStr + '\n' + date;
         }
     }
 
