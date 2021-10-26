@@ -88,6 +88,10 @@ module.exports = function handleAxisDefaults(containerIn, containerOut, coerce, 
         );
     }
 
+    if(containerIn.timezone) {
+        containerOut.timezone = containerIn.timezone;
+    }
+
     setConvert(containerOut, layoutOut);
 
     var autorangeDflt = !containerOut.isValidRange(containerIn.range);

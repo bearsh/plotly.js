@@ -118,6 +118,8 @@
     "is-mobile": "^2.2.2",
     "mapbox-gl": "1.10.1",
     "matrix-camera-controller": "^2.1.4",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "mouse-change": "^1.4.0",
     "mouse-event-offset": "^3.0.2",
     "mouse-wheel": "^1.2.0",
