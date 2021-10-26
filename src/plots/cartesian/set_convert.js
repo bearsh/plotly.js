@@ -5,6 +5,7 @@ var utcFormat = require('d3-time-format').utcFormat;
 var Lib = require('../../lib');
 var numberFormat = Lib.numberFormat;
 var isNumeric = require('fast-isnumeric');
+var moment = require('moment-timezone')
 
 var cleanNumber = Lib.cleanNumber;
 var ms2DateTime = Lib.ms2DateTime;
@@ -952,6 +953,19 @@ module.exports = function setConvert(ax, fullLayout) {
         ax._dateFormat = locale ? locale.timeFormat : utcFormat;
         ax._extraFormat = fullLayout._extraFormat;
     }
+
+    if(ax.timezone) {
+        var _dateFormat = ax._dateFormat;
+        ax._dateFormat = function(x) {
+            return function(y) {
+                var utc = moment.utc(y.toISOString());
+                var utcOffset = utc.tz(ax.timezone).utcOffset();
+                utc.add(utcOffset, 'm');
+                return _dateFormat(x)(utc);
+            };
+        };
+    }
+
     // occasionally we need _numFormat to pass through
     // even though it won't be needed by this axis
     ax._separators = fullLayout.separators;
